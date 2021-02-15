@@ -1,12 +1,16 @@
 FROM ubuntu:20.04
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN \
   apt-get update && \
   apt-get install -y \
     git \
     python3 \
     python3-pip \
-    python3-venv && \
+    python3-venv \
+    libusb-1.0 \
+    cmake && \
   apt-get clean
 
 RUN \
