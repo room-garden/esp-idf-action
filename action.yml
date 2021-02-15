@@ -1,0 +1,11 @@
+name: 'ESP-IDF build'
+description: 'Build esp-idf based firmware'
+inputs:
+  path:
+    description: 'Path to project'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
