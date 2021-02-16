@@ -20,7 +20,7 @@ WORKDIR /opt
 
 RUN \
   git clone --recursive https://github.com/espressif/esp-idf.git && \
-  git -C esp-idf checkout v4.1.1 && \
+  git -C esp-idf checkout v4.4-dev && \
   ./esp-idf/install.sh
 
 COPY entrypoint.sh /opt/entrypoint.sh
